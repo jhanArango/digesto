@@ -40,7 +40,14 @@
 
         <property name="annotatedClasses">
             <list>                
+
+                <value>bknd.Siam.Model.digesto.Temas</value>
+                <value>bknd.Siam.Model.digesto.subTemas</value>
+                <value>bknd.Siam.Model.digesto.Documentos</value>
+                <value>bknd.Siam.Model.digesto.Instituciones</value>
                 <value>bknd.Siam.Model.digesto.Categorias</value>
+                <value>bknd.Siam.Model.digesto.SubCategorias</value>
+
             </list>
         </property>
         <property name="hibernateProperties">

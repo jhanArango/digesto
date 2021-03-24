@@ -25,21 +25,21 @@ public class Categorias implements Serializable {
 	@Column( name = "DESCRIPCION_CATEGORIA", nullable = false, length = 100)
 	private String descripcionCategoria;
 
-	@Column( name = "usrreg", nullable = true, length = 20 )
+	@Column( name = "usrreg", nullable = false, length = 20 )
 	private String usrreg;
 
-	@Column( name = "fecreg", nullable = true )
-	@Temporal(TemporalType.DATE)
+	@Column( name = "fecreg", nullable = false )
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date   fecreg;
 
 	@Column( name = "usrcam", nullable = true, length = 20 )
 	private String usrcam;
 
 	@Column( name = "feccam", nullable = true )
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date   feccam;
 
-	@Column( name = "tstamp", nullable = true, length = 14 )
+	@Column( name = "tstamp", nullable = false, length = 14 )
 	private Long   tstamp;
 
 	private static final long serialVersionUID = 1L;

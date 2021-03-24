@@ -1,5 +1,5 @@
-/* Populate tabla clientes */
---INSERT INTO clientes (nombre, apellido, email, create_at) VALUES('Andrés', 'Guzmán', 'profesor@bolsadeideas.com', '2018-01-01');
+/* Populate tabla CATEGORIAS */
+--insert into categorias (  DESCRIPCION_CATEGORIA, usrreg, fecreg, tstamp  ) VALUES(  'Derecho Adminsitrativo', 'mac2394q', '2020-01-01 10:10:10', 999 )
 --INSERT INTO clientes (nombre, apellido, email, create_at) VALUES('Mr. John', 'Doe', 'john.doe@gmail.com', '2018-01-02');
 --INSERT INTO clientes (nombre, apellido, email, create_at) VALUES('Linus', 'Torvalds', 'linus.torvalds@gmail.com', '2018-01-03');
 --INSERT INTO clientes (nombre, apellido, email, create_at) VALUES('Rasmus', 'Lerdorf', 'rasmus.lerdorf@gmail.com', '2018-01-04');
