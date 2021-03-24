@@ -1,0 +1,52 @@
+plugins {
+    id 'application'
+    id 'org.springframework.boot' version '2.2.0.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+    id 'war'
+}
+
+group = 'bknd'
+version = '1'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClassName = 'bknd.Siam.SiamApplication'
+}
+
+dependencies {
+    implementation ('org.springframework.boot:spring-boot-starter-data-jpa') {
+        exclude group: 'com.zaxxer', module: 'HikariCP'
+    }
+    implementation ('org.springframework.boot:spring-boot-starter-jdbc') {
+        exclude group: 'com.zaxxer', module: 'HikariCP'
+    }
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // this is for mysql java connector
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.15'
+    runtime "mysql:mysql-connector-java:8.0.15"
+
+    implementation 'io.jsonwebtoken:jjwt-api:0.10.7'
+    implementation 'io.jsonwebtoken:jjwt-impl:0.10.7'
+    implementation 'io.jsonwebtoken:jjwt-jackson:0.10.7'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+    compile group: 'com.jayway.jsonpath', name: 'json-path', version: '2.4.0'
+    compile group: 'p6spy', name: 'p6spy', version: '3.8.7'
+    
+    implementation 'org.apache.tomcat:tomcat-jdbc'
+        
+    //runtimeOnly 'com.oracle.ojdbc:ojdbc8'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+}
+
+war {
+    enabled = true
+}
