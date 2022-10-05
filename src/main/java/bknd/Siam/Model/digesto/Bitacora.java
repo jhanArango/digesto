@@ -9,6 +9,7 @@ public class Bitacora {
     protected String usrcam;
     protected Date   feccam;
     protected Float  tstamp;
+    private boolean status;
 
 
 
